@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeIcon = document.getElementById('themeIcon');
     const lightThemeClass = 'light-theme';
     const body = document.body;
+
+    if (screen.orientation) {
+        screen.orientation.lock('portrait').catch(function(error) {
+            console.log('Orientation lock error: ', error);
+        });
+    }
     
     // Переключение темы
     function updateThemeIcon() {
