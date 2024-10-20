@@ -173,6 +173,12 @@ h5 {
 }
 
 @media (max-width: 768px) {
+
+    html, body {
+        overflow: hidden;
+        height: 100%;
+    }
+
     body {
         padding: 0 10px ;
     }
