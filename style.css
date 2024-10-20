@@ -157,3 +157,44 @@ footer.dark-theme {
     background-color: #323131;
 }
 
+h5 {
+    color: rgb(164, 17, 17);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px ;
+    }
+
+    header h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #memeImage {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #themeToggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    button, #themeToggle {
+        margin-top: 20px;
+    }
+
+    footer {
+        font-size: 12px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
