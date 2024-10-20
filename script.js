@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadingContainer = document.querySelector('.loading-container');
     const themeToggleButton = document.getElementById('themeToggle');
     const themeIcon = document.getElementById('themeIcon');
-    const darkThemeClass = 'dark-theme';
+    const lightThemeClass = 'light-theme';
     const body = document.body;
     
     // Переключение темы
     function updateThemeIcon() {
-        if (document.body.classList.contains(darkThemeClass)) {
+        if (document.body.classList.contains(lightThemeClass)) {
             themeIcon.src = 'https://cdn-icons-png.flaticon.com/512/116/116254.png';
         } else {
             themeIcon.src = 'https://cdn-icons-png.flaticon.com/512/116/116274.png';
@@ -20,14 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedTheme) {
         body.classList.add(savedTheme);
     } else {
-        body.classList.add('dark-theme');
+        body.classList.add('light-theme');
     }
 
     updateThemeIcon();
 
     themeToggleButton.addEventListener('click', () => {
-        body.classList.toggle('dark-theme');
-        const currentTheme = body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
+        body.classList.toggle('light-theme');
+        const currentTheme = body.classList.contains('light-theme') ? 'light-theme' : 'dark-theme';
         localStorage.setItem('theme', currentTheme);
         updateThemeIcon();
     });
