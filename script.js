@@ -7,12 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightThemeClass = 'light-theme';
     const body = document.body;
 
-    if (screen.orientation) {
-        screen.orientation.lock('portrait').catch(function(error) {
-            console.log('Orientation lock error: ', error);
-        });
-    }
-    
     // Переключение темы
     function updateThemeIcon() {
         if (document.body.classList.contains(lightThemeClass)) {
