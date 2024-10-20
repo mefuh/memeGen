@@ -45,6 +45,11 @@ header {
     padding: 0px; /* Отступы для шапки и подвала */
 }
 
+header h1 {
+    padding: 0px;
+    margin: 10px; 
+}
+
 main {
     justify-content: center;
     align-items: center;
@@ -89,18 +94,14 @@ main {
     height: 40px;
     margin-left: 10px;
     cursor: pointer;
-    top: 20px;
+
     right: 20px;
     transition: background-color 0.3s ease;
 }
 
-#newMemeButton {
-    margin-top: 20px;
-}
 
 #newMemeButton, .theme-toggle {
     display: inline-block;
-    margin-top: 20px;
     vertical-align: middle;
 }
 
@@ -112,7 +113,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-
     transition: background-color 0.5s ease;
 }
 
@@ -138,13 +138,14 @@ button {
     justify-content: center;
     align-items: center;
     padding: 10px 20px; /* Отступы для кнопки */
-    font-size: 18px; /* Размер шрифта для кнопки */
+    font-size: 16px; /* Размер шрифта для кнопки */
     cursor: pointer; /* Указываем, что кнопка кликабельная */
     background-color: #555; /* Цвет кнопки */
     color: white; /* Цвет текста на кнопке */
     border: none; /* Убираем рамку */
     border-radius: 100px; /* Закругляем углы кнопки */
     transition: background-color 0.3s; /* Плавный переход цвета */
+    font-family: 'Suisse';
 }
 
 button:hover {
@@ -177,7 +178,7 @@ h5 {
     }
 
     header h1 {
-        font-size: 24px;
+        font-size: 44px;
         text-align: center;
     }
 
