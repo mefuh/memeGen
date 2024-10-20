@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     newMemeButton.addEventListener('click', async () => {
         // Скрываем кнопку и показываем индикатор загрузки
+        themeToggleButton.style.display = 'none';
         newMemeButton.style.display = 'none'; // Скрываем кнопку
         loadingContainer.style.display = 'flex'; // Показываем индикатор загрузки
         memeImage.style.display = 'none';
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Прячем индикатор загрузки и показываем кнопку после загрузки изображения
             loadingContainer.style.display = 'none'; // Скрываем индикатор загрузки
             newMemeButton.style.display = 'block'; // Показываем кнопку
+            themeToggleButton.style.display = 'flex';
         }
     });
 
