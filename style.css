@@ -1,0 +1,159 @@
+@font-face {
+    src: url(https://code.s3.yandex.net/web-code/fonts/SuisseIntl-Book.woff);
+    font-family: 'Suisse';
+    font-weight: normal;
+}
+  
+  @font-face {
+    src: url(https://code.s3.yandex.net/web-code/fonts/SuisseIntl-Bold.woff
+  );
+    font-family: 'Suisse';
+    font-weight: bold;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: #ffffff; 
+    color: #000000; 
+    font-family: 'Suisse'; /* Шрифт */
+    margin: 0 auto; /* Убираем отступы по умолчанию */
+    padding: 0;
+    display: flex; /* Используем flexbox для вертикального центрирования */
+    flex-direction: column; /* Вертикальная ориентация */
+    min-height: 100vh; /* Минимальная высота страницы */
+    transition: background-color 0.5s ease;
+}
+
+body.dark-theme {
+    background-color: #323131;
+    color: #ffffff;
+}
+
+body.dark-theme #themeIcon {
+    transform: rotate(180deg);
+}
+
+header {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center; /* Центрируем текст в шапке и подвале */
+    padding: 0px; /* Отступы для шапки и подвала */
+}
+
+main {
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Центрируем текст в основном содержимом */
+    padding: auto; /* Отступы для основного содержимого */
+    flex: 1; /* Позволяем основному содержимому занимать всё оставшееся пространство */
+}
+
+.loading-container {
+    display: flex; /* Используем flexbox для центрирования */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    margin: 200px 0; /* Отступ сверху и снизу */
+}
+
+.loading-indicator {
+    border: 5px solid #f3f3f3; /* Светлый цвет для фона индикатора */
+    border-top: 5px solid #4b4b4b; /* Цвет для верхней части индикатора */
+    border-radius: 50%; /* Делаем индикатор круглым */
+    width: 50px; /* Ширина индикатора */
+    height: 50px; /* Высота индикатора */
+    animation: spin 1s linear infinite; /* Анимация вращения */
+}
+
+/* Анимация вращения */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.meme-container {
+    display: flex; /* Используем flexbox для центрирования изображения */
+    justify-content: center; /* Центрируем по горизонтали */
+    margin: 20px 0; /* Отступы вокруг изображения */
+}
+
+.theme-toggle {
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#themeToggle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+#themeIcon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.5s ease;
+}
+
+#memeImage {
+    max-width: 90%;
+    max-height: 50vh;
+    display: block;
+    margin: 0 auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px; /* Отступы для кнопки */
+    font-size: 18px; /* Размер шрифта для кнопки */
+    cursor: pointer; /* Указываем, что кнопка кликабельная */
+    background-color: #555; /* Цвет кнопки */
+    color: white; /* Цвет текста на кнопке */
+    border: none; /* Убираем рамку */
+    border-radius: 100px; /* Закругляем углы кнопки */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+button:hover {
+    background-color: #777; /* Цвет кнопки при наведении */
+}
+
+footer {
+    font-weight: normal;
+    text-align: left; /* Центрируем текст в шапке и подвале */
+    padding: 10px; /* Отступы для шапки и подвала */
+    background: rgb(50,49,49);
+    background: linear-gradient(180deg, rgba(50,49,49,1) 0%, rgba(33,33,33,1) 100%);
+    color: #ffffff;
+    position: sticky;
+    bottom: 0;
+    width: 100;
+}
+
+footer.dark-theme {
+    background-color: #323131;
+}
+
