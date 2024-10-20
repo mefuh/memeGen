@@ -18,8 +18,8 @@ html {
 }
 
 body {
-    background-color: #ffffff; 
-    color: #000000; 
+    background-color: #323131; 
+    color: #ffffff; 
     font-family: 'Suisse'; /* Шрифт */
     margin: 0 auto; /* Убираем отступы по умолчанию */
     padding: 0;
@@ -29,12 +29,12 @@ body {
     transition: background-color 0.5s ease;
 }
 
-body.dark-theme {
-    background-color: #323131;
-    color: #ffffff;
+body.light-theme {
+    background-color: #ffffff; 
+    color: #000000; 
 }
 
-body.dark-theme #themeIcon {
+body.light-theme #themeIcon {
     transform: rotate(180deg);
 }
 
